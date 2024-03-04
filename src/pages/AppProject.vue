@@ -1,12 +1,12 @@
 <script>
 import axios from 'axios';
 
-import ProjectCard from './ProjectCard.vue';
+import ProjectCard from '../components/ProjectCard.vue';
 
 import { store } from '../store';
 
 export default {
-    name: 'AppMain',
+    name: 'AppProject',
     components: {
         ProjectCard,
     },
@@ -38,6 +38,7 @@ export default {
     },
 }
 </script>
+
 <template lang="">
     <div class="mt-5">
         <div class="container">
@@ -73,6 +74,7 @@ export default {
         </div>
     </div>
 </template>
+
 <style lang="">
-    
+
 </style>
