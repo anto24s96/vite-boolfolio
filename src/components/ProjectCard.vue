@@ -12,26 +12,24 @@ export default {
         }
     },
     methods: {
-        /*         getUrlImage() {
-                    let image;
-        
-                    if (this.project.logo != null) {
-                        image = '/storage/' + this.project.logo;
-                    }
-                    else {
-                        image = 'http://pngimg.com/uploads/folder/folder_PNG100474.png';
-                    }
-        
-                    return `${this.store.baseUrl}${image}`;
-                } */
+        getImg(img) {
+            let path = 'https://pluspng.com/img-png/folder-png-folder-png-image-1979.png';
+
+            if (img != null) {
+                path = `${store.baseUrl}/storage/${img}`
+            }
+
+            return path;
+        }
     },
 }
 </script>
+
 <template lang="">
     <div class="col-4 py-3">
         <div class="card">
             <div class="card-body text-center">
-                <img src="http://pngimg.com/uploads/folder/folder_PNG100474.png" alt="" class="card-img-top">
+                <img :src="getImg(project.logo)" :alt="cover_image" class="card-img-top">
                 <div>Name:
                     {{project.name }}
                 </div>
@@ -41,6 +39,7 @@ export default {
         </div>
     </div>
 </template>
+
 <style lang="">
-    
+
 </style>
