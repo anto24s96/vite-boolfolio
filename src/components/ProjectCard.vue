@@ -27,26 +27,29 @@ export default {
 
 <template lang="">
     <div class="col-3 py-3">
-        <div class="card my-card bg-dark text-white rounded-3">
-            <div class="card_top">
-                <div class="img-container">
-                    <img :src="getImg(project.logo)" :alt="cover_image" class="card-img-top">
+        <router-link :to="{ name: 'project-details', params: { slug: project.slug } }" class="text-decoration-none">
+            <div class="card my-card bg-dark text-white rounded-3">
+                <div class="card_top">
+                    <div class="img-container">
+                        <img :src="getImg(project.logo)" :alt="project.logo" class="card-img-top">
+                    </div>
                 </div>
-            </div>
-            <div class="card-body text-center">
-                <div>Name:
-                    {{project.name }}
+                <div class="card-body text-center">
+                    <div>NOME PROGETTO:
+                        {{project.name }}
+                    </div>
+                    <div>DATA INIZIO: {{ project.start_date }}</div>
+                    <div>DATA FINE: {{ project.end_date }}</div>
                 </div>
-                <div>{{ project.start_date }}</div>
-                <div>{{ project.end_date }}</div>
-            </div>
-        </div>
+            </div>        
+        </router-link>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .my-card {
     transition: transform 0.5s;
+    min-height: 420px;
 
     &:hover {
         transform: scale(1.1);
