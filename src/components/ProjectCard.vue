@@ -26,10 +26,14 @@ export default {
 </script>
 
 <template lang="">
-    <div class="col-4 py-3">
-        <div class="card">
+    <div class="col-3 py-3">
+        <div class="card my-card bg-dark text-white rounded-3">
+            <div class="card_top">
+                <div class="img-container">
+                    <img :src="getImg(project.logo)" :alt="cover_image" class="card-img-top">
+                </div>
+            </div>
             <div class="card-body text-center">
-                <img :src="getImg(project.logo)" :alt="cover_image" class="card-img-top">
                 <div>Name:
                     {{project.name }}
                 </div>
@@ -40,6 +44,28 @@ export default {
     </div>
 </template>
 
-<style lang="">
+<style lang="scss" scoped>
+.my-card {
+    transition: transform 0.5s;
 
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
+
+    .card_top {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .img-container {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
 </style>

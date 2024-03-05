@@ -44,7 +44,7 @@ export default {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-center">Boolpress</h1>
+                    <h2 class="text-center text-uppercase fw-bolder">Bool-Projects</h2>
                     <p class="text-center py-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, incidunt. Sunt optio non consectetur. Illum libero architecto iure! Placeat voluptates doloribus quis sequi error sed facere quia fugit eos suscipit!
                     </p>
@@ -59,12 +59,12 @@ export default {
                 <div class="col-12">
                     <ul class="list-unstyled d-flex justify-content-center">
                         <li class="mx-2">
-                            <button :class="currentPage == 1 ? 'disabled' : ''" class="btn btn-outline-success" @click="getProjects(currentPage - 1)">
+                            <button :class="currentPage == 1 ? 'disabled' : ''" class="btn btn-outline-primary" @click="getProjects(currentPage - 1)">
                                 PREV
                             </button>
                         </li>
                         <li class="mx-2">
-                            <button :class="currentPage == lastPage ? 'disabled' : ''" class="btn btn-outline-success" @click="getProjects(currentPage + 1)">
+                            <button :class="currentPage == lastPage ? 'disabled' : ''" class="btn btn-outline-primary" @click="getProjects(currentPage + 1)">
                                 NEXT
                             </button>
                         </li>
