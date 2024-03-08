@@ -8,6 +8,7 @@ export default {
         return {
             store,
             project: [],
+            technologies: [],
         }
     },
     created() {
@@ -43,7 +44,7 @@ export default {
 
         <div class="row justify-content-center">
             <div class="col-4">
-                <div class="card my-card bg-dark text-white rounded-3">
+                <div class="card my-card bg-dark text-white rounded-3 ">
                     <div class="card_top">
                         <div class="img-container">
                             <img :src="getImg(project.logo)" :alt="project.logo" class="card-img-top">
@@ -57,8 +58,8 @@ export default {
                             {{ project.description }}
                         </p>
                         <div>DATA INIZIO: {{ project.start_date }}</div>
-                        <div>DATA FINE: {{ project.end_date }}</div>
-                        <div class="py-2">Tipologia: {{ project.type ? project.type.name : 'Nessuna tipologia specificata' }}</div> 
+                        <div>DATA FINE: {{ project.end_date }}</div>                        
+                        <div class="py-2">Tipologia: {{ project.type ? project.type.name : 'Nessuna tipologia specificata' }}</div>
                     </div>
                 </div>            
             </div>
