@@ -5,6 +5,7 @@ import AppProject from './pages/AppProject.vue';
 import AppNotFound from './pages/AppNotFound.vue';
 import ProjectDetails from './pages/ProjectDetails.vue'
 import AppContactUs from './pages/AppContactUs.vue';
+import AppThankYou from './pages/AppThankYou.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -29,6 +30,11 @@ const router = createRouter({
             path: '/contacts',
             name: 'contacts',
             component: AppContactUs
+        },
+        {
+            path: '/thank-you',
+            name: 'thank-you',
+            component: AppThankYou
         },
         {
             path: '/:catchAll(.*)',
